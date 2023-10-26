@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "Manrope";
+  src: url(../fonts/Manrope-ExtraBold.ttf) format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 35%);
+  --dark-grayish-blue: hsl(219, 29%, 14%);
+  --very-dark-grayish-blue: hsl(0, 0%, 0%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  font-family: "Manrope", sans-serif;
+  font-size: 2rem;
+  background-color: var(--dark-blue);
+  color: var(--light-cyan);
+}
+
+.container {
+  margin: 7.5rem 1rem 0;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: var(--dark-grayish-blue);
+  border-radius: 10px;
+  box-shadow: 30px 50px 80px 0px rgba(0, 0, 0, 0.1);
+
+  padding: 2.5rem 1.5rem 4.5rem;
+}
+
+.heading {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 4.086px;
+  padding-bottom: 1.5rem;
+  color: var(--neon-green);
+  text-transform: uppercase;
+}
+
+.advice-text {
+  font-size: 24px;
+  letter-spacing: -0.257px;
+  padding-bottom: 1.5rem;
+}
+
+.advice-container {
+  text-align: center;
+  min-height: 16rem;
+}
+
+.page-divider {
+  width: 100%;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -2rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--neon-green);
+  border-radius: 50%;
+}
+
+.icon-container:hover {
+  box-shadow: 0 0 2rem var(--neon-green);
+}
+
+@media screen and (min-width: 576px) {
+  body {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    margin: 0;
+    width: 33.75rem;
+  }
+
+  .advice-container {
+    text-align: center;
+    min-height: 11rem;
+  }
+
+  .card {
+    padding: 3rem 3rem 5rem;
+  }
+
+  .advice-text {
+    font-size: 28px;
+    letter-spacing: -0.3px;
+  }
+}

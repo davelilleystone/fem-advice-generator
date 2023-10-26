@@ -8,13 +8,20 @@
     <title>Advice generator app</title>
   </head>
   <body>
-    <div class="container">
+    <main class="container">
       <div class="card">
         <h1 class="heading">Advice #<span class="advice-id"></span></h1>
-        <p class="advice-text"></p>
-        <button class="button" id="button">Get Advice</button>
+        <p class="advice-container">&ldquo;<span class="advice-text"></span>&rdquo;</p>
+        <picture>
+          <source media="(max-width: 576px)" srcset="./images/pattern-divider-mobile.svg" />
+          <source media="(min-width: 577px)" srcset="./images/pattern-divider-desktop.svg" />
+          <img src="./images/pattern-divider-desktop.svg" alt="page divider" class="page-divider" />
+        </picture>
+        <div class="icon-container">
+          <img src="./images/icon-dice.svg" alt="a die showing five spots" class="dice-icon" />
+        </div>
       </div>
-    </div>
+    </main>
     <script src="./js/app.js" type="module"></script>
     <script src="./modules/fetchAdvice.js" type="module"></script>
     <script src="./modules/displayAdvice.js" type="module"></script>
